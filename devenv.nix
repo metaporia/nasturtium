@@ -41,18 +41,35 @@
   services.mysql.enable = true;
   services.mysql.package = pkgs.mariadb;
   services.mysql.initialDatabases = [{ name = "wordpress"; }];
-  services.mysql.ensureUsers = [{
-    name = "wordpress";
-    password = "wordpress";
-    ensurePermissions = { "wordpress.*" = "ALL PRIVILEGES"; };
-  }];
+  services.mysql.ensureUsers = [
+    {
+      name = "wordpress";
+      password = "wordpress";
+      ensurePermissions = { 
+        "wordpress.*" = "ALL PRIVILEGES"; 
+      };
+
+    }
+    {
+      name = "aporia";
+      password = "whywhywhy";
+      ensurePermissions = { 
+        "aporia.*" = "ALL PRIVILEGES"; 
+      };
+
+    }
+
+  ];
 
   languages.javascript.enable = true;
   languages.php.enable = true;
 
-  process.manager.before = "npm install";
+  # rest api error. idk if it's because we put wordpress in a subdir or what
+  # but the test was using the wrong endpoint (didn't suffix url with "/wp")
   processes.wordpress.exec = "wp server";
-  processes.wordpress-assets.exec = "npm run dev";
+
+  # process.manager.before = "npm install";
+  # processes.wordpress-assets.exec = "npm run dev";
 
 
 }
