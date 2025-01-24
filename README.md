@@ -57,5 +57,15 @@ details setting up on NixOS and suggestions for SEO, recommended plugins.
     - IAM admin: (https://194722401414.signin.aws.amazon.com/console, DiurnalAppellation, TPYdJt5[ )
     - TODO: MFA
     - S3 bucket for static content--bucket name: "nasturtiumfilms.com"
+    - IAM identity center organization instance: 7223f2b8b5ef6302
+        - console link: https://d-9067da3ced.awsapps.com/start
+    - DiurnalAppellation access key AKIAS2VS4BSDORXUL7LW secret key elsewhere
         
 
+## Wordpress dev install (NixOS)
+
+- see ~/dot/modules/nixos/wordpress.nix
+- installation [docs](https://developer.wordpress.org/advanced-administration/before-install/howto-install/)
+
+- set up db (mysql)
+- example vm [flake](https://shippingbytes.com/2024/06/18/nixos-from-local-development-to-try-with-a-vm-wordpress-use-case/)
