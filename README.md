@@ -69,3 +69,15 @@ details setting up on NixOS and suggestions for SEO, recommended plugins.
 
 - set up db (mysql)
 - example vm [flake](https://shippingbytes.com/2024/06/18/nixos-from-local-development-to-try-with-a-vm-wordpress-use-case/)
+
+
+# Vanilla Stub
+
+Pulled templates (under Creative Commons license) from
+[html5up](https://html5up.net).
+
+- Dimension looks very nice, see ./templates
+
+# Cool (and possibly even helpful) Tools
+
+- pico css
