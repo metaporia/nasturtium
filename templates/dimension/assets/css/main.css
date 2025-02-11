@@ -1,6 +1,32 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
+/* Added by me */
+
+
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* clear floats after columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/* End of my additions */
+
 /*
 	Dimension by HTML5 UP
 	html5up.net | @ajlkn
